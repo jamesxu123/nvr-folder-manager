@@ -5,26 +5,37 @@
 
 // use std::io;
 use std::path::{Path, PathBuf};
+use std::env;
+use clap::{Arg, App, SubCommand};
 
 fn main() {
-    let path = Path::new("D:\\NVR\\192.168.0.144_0012155fc97a");
+    let matches = App::new("nvr-folder-cleanup")
+        .version("0.1")
+        .author("James X. <james@jamesxu.ca>")
+        .about("Removes files from folder until size is met. Assumes chronological folder naming in main directory.")
+        .args_from_usage(
+            "-s, --size=[SIZE] 'Set target directory size in KB'
+                   <DIRECTORY>              'Sets the input file to use'")
+        .get_matches();
+
+    let path = Path::new(matches.value_of("DIRECTORY").expect("You must give a directory to operate on!"));
+    let max_size = matches.value_of("size").expect("You must give a size in kilobytes.").to_string().parse::<u64>().expect("Size must be a number.");
 
     println!("Folder Size in KB: {}", get_folder_size(path));
 
     let folder_size = get_folder_size(path); // Convert to KB
 
-    if folder_size > 20_000_000 {
+    if folder_size > max_size {
         println!("yikes");
-        process_folders(path);
+        process_folders(path, max_size);
     } else {
         println!("good 2 go");
     }
-
 }
 
 ///Process the given folder to remove files
-fn process_folders(folder: &Path) {
-    let mut size_diff = get_folder_size(folder) - 20_000_000;
+fn process_folders(folder: &Path, max_size: u64) {
+    let mut size_diff = get_folder_size(folder) - max_size;
 
     let mut date_folders: Vec<_> = Vec::new();
 
@@ -48,7 +59,7 @@ fn process_folders(folder: &Path) {
             size_diff -= size;
         } else {
             size_diff -= delete_by_folder_content(folder, size_diff);
-            println!("{}", size_diff);
+            println!("Final size diff {} KB", size_diff);
             return;
         }
     }
