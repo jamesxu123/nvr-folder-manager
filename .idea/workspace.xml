@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated />
   </component>
@@ -12,7 +21,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df9a90c-51a1-4059-8485-354f5d80e1b9" name="Default Changelist" comment="" />
+    <list default="true" id="5df9a90c-51a1-4059-8485-354f5d80e1b9" name="Default Changelist" comment="Initial files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +63,7 @@
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,13 +74,41 @@
       <option name="presentableId" value="Default" />
       <updated>1597198837044</updated>
       <workItem from="1597198838724" duration="140000" />
+      <workItem from="1597199146991" duration="219000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial files">
+      <created>1597199201285</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597199201285</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial files" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="1135" y="599" key="Github.ShareDialog" timestamp="1597199277562">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1135" y="599" key="Github.ShareDialog/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597199277562" />
     <state width="2517" height="492" key="GridCell.Tab.0.bottom" timestamp="1597198978102">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

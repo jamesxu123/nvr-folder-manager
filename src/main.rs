@@ -22,6 +22,7 @@ fn main() {
 
 }
 
+///Process the given folder to remove files
 fn process_folders(folder: &Path) {
     let mut size_diff = get_folder_size(folder) - 20_000_000;
 
@@ -53,12 +54,12 @@ fn process_folders(folder: &Path) {
     }
 }
 
-//Delete entire folder
+///Delete entire folder
 fn delete_folder(folder: &Path) {
     println!("Test Deleting {}", folder.file_name().unwrap().to_str().unwrap())
 }
 
-//Delete folder files until size is under limit and returns delta file size
+///Delete folder files until size is under limit and returns delta file size
 fn delete_by_folder_content(folder: &Path, size_diff: u64) -> u64 {
     let size = get_folder_size(folder);
     let mut deleted_size: u64 = 0;
@@ -78,6 +79,7 @@ fn delete_by_folder_content(folder: &Path, size_diff: u64) -> u64 {
     deleted_size
 }
 
+///Return Vec<PathBuf> of all files inside the given folder recursively
 fn folder_walk(folder: &Path) -> Vec<PathBuf> {
     let mut paths: Vec<_> = Vec::new();
     for new_path in folder.read_dir().expect("Unable to get directory contents") {
@@ -94,7 +96,7 @@ fn folder_walk(folder: &Path) -> Vec<PathBuf> {
     paths
 }
 
-//Returns folder size in bytes
+///Returns folder size in kilobytes
 fn get_folder_size(folder: &Path) -> u64 {
     let mut size = 0;
 
