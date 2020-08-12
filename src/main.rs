@@ -5,8 +5,7 @@
 
 // use std::io;
 use std::path::{Path, PathBuf};
-use std::env;
-use clap::{Arg, App, SubCommand};
+use clap::App;
 
 fn main() {
     let matches = App::new("nvr-folder-cleanup")
@@ -42,7 +41,7 @@ fn process_folders(folder: &Path, max_size: u64) {
     for path in folder.read_dir().expect("Unable to get directory contents") {
         let path = path.expect("Unable to get path");
         if path.metadata().expect("Unable to get metadata").is_dir() {
-            let name = path.file_name();
+            // let name = path.file_name(); TODO: might be needed for more verbose opts
             date_folders.push(path)
         }
     }
@@ -67,12 +66,12 @@ fn process_folders(folder: &Path, max_size: u64) {
 
 ///Delete entire folder
 fn delete_folder(folder: &Path) {
-    println!("Test Deleting {}", folder.file_name().unwrap().to_str().unwrap())
+    println!("Test Deleting {}", folder.file_name().unwrap().to_str().unwrap()) //TODO: Implement actual deleting (might use fn folder_walk())
 }
 
 ///Delete folder files until size is under limit and returns delta file size
 fn delete_by_folder_content(folder: &Path, size_diff: u64) -> u64 {
-    let size = get_folder_size(folder);
+    // let size = get_folder_size(folder);
     let mut deleted_size: u64 = 0;
     let contents = folder_walk(folder);
     for file in contents {

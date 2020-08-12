@@ -22,9 +22,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5df9a90c-51a1-4059-8485-354f5d80e1b9" name="Default Changelist" comment="Initial files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +82,7 @@
       <updated>1597198837044</updated>
       <workItem from="1597198838724" duration="140000" />
       <workItem from="1597199146991" duration="219000" />
-      <workItem from="1597199659473" duration="1374000" />
+      <workItem from="1597199659473" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="Initial files">
       <created>1597199201285</created>
@@ -101,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597199769907</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="* switch to using CLI args instead of hard coding">
+      <created>1597201185437</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597201185437</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +126,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial files" />
     <MESSAGE value="* set comments to be doc comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="* set comments to be doc comments" />
+    <MESSAGE value="* switch to using CLI args instead of hard coding" />
+    <option name="LAST_COMMIT_MESSAGE" value="* switch to using CLI args instead of hard coding" />
   </component>
   <component name="WindowStateProjectService">
     <state x="189" y="475" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597201034155">
@@ -133,22 +138,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1135" y="599" key="Github.ShareDialog/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597199277562" />
-    <state width="2517" height="266" key="GridCell.Tab.0.bottom" timestamp="1597201007893">
+    <state width="2517" height="266" key="GridCell.Tab.0.bottom" timestamp="1597201238772">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="266" key="GridCell.Tab.0.bottom/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201007893" />
-    <state width="2517" height="266" key="GridCell.Tab.0.center" timestamp="1597201007893">
+    <state width="2517" height="266" key="GridCell.Tab.0.bottom/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201238772" />
+    <state width="2517" height="266" key="GridCell.Tab.0.center" timestamp="1597201238772">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="266" key="GridCell.Tab.0.center/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201007893" />
-    <state width="2517" height="266" key="GridCell.Tab.0.left" timestamp="1597201007893">
+    <state width="2517" height="266" key="GridCell.Tab.0.center/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201238772" />
+    <state width="2517" height="266" key="GridCell.Tab.0.left" timestamp="1597201238772">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="266" key="GridCell.Tab.0.left/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201007893" />
-    <state width="2517" height="266" key="GridCell.Tab.0.right" timestamp="1597201007893">
+    <state width="2517" height="266" key="GridCell.Tab.0.left/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201238772" />
+    <state width="2517" height="266" key="GridCell.Tab.0.right" timestamp="1597201238772">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="266" key="GridCell.Tab.0.right/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201007893" />
+    <state width="2517" height="266" key="GridCell.Tab.0.right/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201238772" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1597198978102">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -165,9 +170,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="492" key="GridCell.Tab.1.right/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597198978102" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1597199777804">
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1597201364151">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597199777804" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/-1920.750.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1597201364151" />
   </component>
 </project>
