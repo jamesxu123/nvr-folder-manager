@@ -66,7 +66,8 @@ fn process_folders(folder: &Path, max_size: u64) {
 
 ///Delete entire folder
 fn delete_folder(folder: &Path) {
-    println!("Test Deleting {}", folder.file_name().unwrap().to_str().unwrap()) //TODO: Implement actual deleting (might use fn folder_walk())
+    std::fs::remove_dir_all(folder);
+    println!("Deleting {}", folder.file_name().unwrap().to_str().unwrap())
 }
 
 ///Delete folder files until size is under limit and returns delta file size
@@ -80,7 +81,7 @@ fn delete_by_folder_content(folder: &Path, size_diff: u64) -> u64 {
         let file_size = file.metadata().unwrap().len() / 1_000;
 
         if file_size < size_diff - deleted_size {
-            println!("fake deleting");
+            std::fs::remove_file(file.as_path());
             deleted_size += file_size;
         } else {
             break;
